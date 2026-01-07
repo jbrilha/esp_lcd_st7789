@@ -55,10 +55,6 @@ void init_lcd_spi() {
 
 If you intend to use other devices that require MISO in the same SPI bus, the bus config should include it normally.
 
-## Supported devices
-
-Only tested on an M5Stack Core Basic (v2.7) as it is its embedded display, but should work with other ESP32 variants as well
-
 ## Examples
 
 An example is present in the `examples` directory, using LVGL
