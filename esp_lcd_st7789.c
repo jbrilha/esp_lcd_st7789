@@ -240,15 +240,15 @@ typedef struct {
 
 static const st7789_lcd_init_cmd_t vendor_specific_init_default[] = {
     //  {cmd, { data }, data_size, delay_ms}
-    {SWRESET, {}, 0, 150},
-    {SLPOUT, {}, 9, 10},
+    {SWRESET, 0, 0, 150},
+    {SLPOUT, 0, 9, 10},
     // {COLMOD, (uint8_t[]){0x55}, 1, 10},
     // {MADCTL, (uint8_t[]){0x08}, 1, 0},
     {CASET, (uint8_t[]){0x00, 0, 0, 240}, 4, 0},
     {RASET, (uint8_t[]){0x00, 0, 320>>8, 320&0xFF}, 4, 0},
-    {INVON, {}, 0, 10},
-    {NORON, {}, 0, 10},
-    {DISPON, {}, 0, 10},
+    {INVON, 0, 0, 10},
+    {NORON, 0, 0, 10},
+    {DISPON, 0, 0, 10},
 };
 
 static esp_err_t panel_st7789_init(esp_lcd_panel_t *panel) {
